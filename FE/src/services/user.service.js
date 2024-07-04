@@ -8,7 +8,10 @@ export const getCars = async () => {
         "x-access-token": accessToken,
       },
     };
-    const response = await axios.get("http://localhost:3000/garage", config);
+    const response = await axios.get(
+      "https://challenge-6.onrender.com/garage",
+      config
+    );
     return response?.data;
   } catch (error) {
     return error.response?.data;
@@ -24,7 +27,7 @@ export const addCar = async (carData) => {
       },
     };
     const response = await axios.post(
-      "http://localhost:3000/garage",
+      "https://challenge-6.onrender.com/garage",
       carData,
       config
     );
@@ -43,7 +46,7 @@ export const deleteCar = async (index) => {
       },
     };
     const response = await axios.delete(
-      `http://localhost:3000/garage/${index}`,
+      `https://challenge-6.onrender.com/garage/${index}`,
       config
     );
     return response?.data;
@@ -62,7 +65,7 @@ export const updateCharge = async (index, charge) => {
       },
     };
     const response = await axios.put(
-      `http://localhost:3000/garage/${index}`,
+      `https://challenge-6.onrender.com/garage/${index}`,
       { charge },
       config
     );

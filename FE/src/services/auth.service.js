@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseURL = "http://localhost:3000/auth";
+const baseURL = "https://challenge-6.onrender.com";
 
 export const login = async (email, password) => {
   const URL = `${baseURL}/login`;
