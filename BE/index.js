@@ -6,7 +6,7 @@ import Server from "./src/Server/Server.js";
 
 Config.load();
 
-const { PORT, HOST, DB_URI } = process.env;
+const { PORT, DB_URI } = process.env;
 
 const authRouter = new AuthRoutes();
 const garageRouter = new GarageRoutes();
@@ -15,7 +15,7 @@ const routers = {
   garageRouter,
 };
 
-const server = new Server(PORT, HOST, routers);
+const server = new Server(PORT, routers);
 server.start();
 
 const db = new Database(DB_URI);

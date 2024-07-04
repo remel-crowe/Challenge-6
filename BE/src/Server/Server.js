@@ -4,7 +4,6 @@ import express from "express";
 export default class Server {
   #app;
   #port;
-
   #server;
   #authRouter;
   #garageRouter;
