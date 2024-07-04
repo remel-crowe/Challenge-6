@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Auth from "./pages/Auth";
-import Home from "./pages/Home";
-import Header from "./components/Header";
-import Profile from "./pages/Profile";
-import Garage from "./pages/Garage";
+import Auth from "./pages/Auth.jsx";
+import Home from "./pages/Home.jsx";
+import Header from "./components/Header.jsx";
+import Profile from "./pages/Profile.jsx";
+import Garage from "./pages/Garage.jsx";
 
-import { getCars, deleteCar, addCar } from "./services/user.service";
+import { getCars, deleteCar, addCar } from "./services/user.service.js";
 
 function App() {
   const [user, setUser] = useState(null);
